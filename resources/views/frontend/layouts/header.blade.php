@@ -176,29 +176,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-1 col-lg-2 hidden-sm hidden-xs">
-                    {{--<div class="top-cart-contain f-right ">
-                        <div id="cart" class="mini-cart text-xs-center">
-                            <div class="heading-cart">
-                                <a href="https://freshfood.exdomain.net/checkout/cart">
-                                    <div class="icon f-left relative">
-                                        <i class="fa fa-shopping-bag"></i>
-                                        <span class="cartCount count_item_pr hidden-lg" id="cart-total">0</span>
-                                    </div>
-                                    <div class="right-content hidden-md">
-                                        <span class="label">Giỏ hàng</span>
-                                        <span class="cartCount2">(0)</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="top-cart-content">
-                                <ul id="cart-sidebar" class="mini-products-list count_li">
-                                    <li class="no-item">
-                                        <p class="text-center">Giỏ hàng của bạn trống!</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>--}}
+
 
                     <div class="top-cart-contain f-right ">
                         <div id="cart" class="mini-cart text-xs-center">
@@ -216,7 +194,7 @@
                             </div>
                             <div class="top-cart-content">
                                 <ul id="cart-sidebar" class="mini-products-list count_li">
-                                    @if(Session::has('cart'))
+                                    @if(Session::has('cart') && Session::get('cart')->totalQty > 0)
                                         @foreach(Session::get('cart')->items as $products)
                                             <li class="list-item-cart">
                                                 <ul>

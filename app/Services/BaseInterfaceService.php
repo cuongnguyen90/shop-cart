@@ -3,20 +3,18 @@
  *
  * Created by PhpStorm.
  * Author: Cuong.Nguyen ( @cuong.nguyen )
- * Date: October/7/19
- * Time: 16:35
+ * Date: October/10/19
+ * Time: 10:15
  */
 
-namespace App\Http\Repositories\Products;
+namespace App\Services;
 
 
-interface ProductInterfaceRepository
+interface BaseInterfaceService
 {
-    public function get($id);
-
     public function getAll();
 
-    public function update($id,array $attribute);
+    public function getById($id);
 
     public function create(array $attribute);
 

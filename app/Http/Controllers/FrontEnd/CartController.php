@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\FrontEnd;
 
 use App\Http\Cart;
-use App\Http\Repositories\Products\ProductInterfaceRepository;
+use App\Repositories\Products\ProductInterfaceRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;

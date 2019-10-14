@@ -7,13 +7,12 @@
  * Time: 13:56
  */
 
-namespace App\Http\Repositories\Categories;
+namespace App\Repositories\Categories;
 
-
-use App\Http\Repositories\BaseEloquentRepository;
 use App\Model\Category;
+use App\Repositories\Products\ProductEloquentRepository;
 
-class CategoryEloquentRepository extends BaseEloquentRepository
+class CategoryEloquentRepository extends ProductEloquentRepository implements CategoryInterfaceRepository
 {
 
     protected function setModel()

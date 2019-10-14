@@ -7,13 +7,11 @@
  * Time: 16:36
  */
 
-namespace App\Http\Repositories;
+namespace App\Repositories;
 
 
-use App\Http\Repositories\Categories\CategoryInterfaceRepository;
-use App\Http\Repositories\Products\ProductInterfaceRepository;
 
-abstract class BaseEloquentRepository implements ProductInterfaceRepository,CategoryInterfaceRepository
+abstract class BaseEloquentRepository implements BaseInterfaceRepository
 {
 
     protected $model;
@@ -32,7 +30,7 @@ abstract class BaseEloquentRepository implements ProductInterfaceRepository,Cate
 
     public function get($id)
     {
-        return $this->model->findOrFail($id);
+        return $this->model->find($id);
     }
 
     public function getAll()
@@ -54,4 +52,6 @@ abstract class BaseEloquentRepository implements ProductInterfaceRepository,Cate
     {
         // TODO: Implement delete() method.
     }
+
+
 }

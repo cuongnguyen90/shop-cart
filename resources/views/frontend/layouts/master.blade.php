@@ -28,14 +28,14 @@
     @yield('style')
 </head>
 <body class="common-home">
-@include('layouts.header')
+@include('frontend.layouts.header')
 @yield('slide')
 @yield('content')
-@include('layouts.footer')
-@include('layouts.script')
+@include('frontend.layouts.footer')
+@include('frontend.layouts.script')
 @yield('script')
 <!-- Facebook Login --> <!-- Google Login --> <!-- Facebook script -->
 <!-- Show Popup Cart -->
-@include('layouts.cart')
+@include('frontend.layouts.cart')
 </body>
 </html>

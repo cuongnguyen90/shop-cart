@@ -7,13 +7,12 @@
  * Time: 16:41
  */
 
-namespace App\Http\Repositories\Products;
+namespace App\Repositories\Products;
 
-
-use App\Http\Repositories\BaseEloquentRepository;
 use App\Model\Product;
+use App\Repositories\BaseEloquentRepository;
 
-class ProductEloquentRepository extends BaseEloquentRepository
+class ProductEloquentRepository extends BaseEloquentRepository implements ProductInterfaceRepository
 {
 
     protected function setModel()

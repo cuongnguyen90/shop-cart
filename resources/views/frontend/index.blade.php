@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('frontend.layouts.master')
 @section('title')
     <title>Demo Shopping Cart - Index</title>
 @endsection
@@ -170,7 +170,7 @@
                                                                                          itemtype="http://schema.org/Product">
                                                                                         <div
                                                                                             class="product-thumbnail flexbox-grid">
-                                                                                            <a href="https://freshfood.exdomain.net/kiwi-xanh"
+                                                                                            <a href="{{route('product.detail',['slug'=>$item->slug,'id'=>$item->id])}}"
                                                                                                title="{{$item->name}}">
                                                                                                 <img
                                                                                                     src="{{URL::to('storage/image/Cam-228x228.jpg')}}"
@@ -188,7 +188,7 @@
                                                                                                            href="{{route('add.cart',['id'=>$item->id])}}">
                                                                                                             <i class="fa fa-shopping-bag"></i>
                                                                                                         </a> <a
-                                                                                                            href="https://freshfood.exdomain.net/kiwi-xanh"
+                                                                                                            href="{{route('product.detail',['slug'=>$item->slug,'id'=>$item->id])}}"
                                                                                                             data-toggle="tooltip"
                                                                                                             title="Xem"
                                                                                                             class="btn-gray btn_view btn right-to"><i
