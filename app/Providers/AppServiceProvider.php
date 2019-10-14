@@ -20,7 +20,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        if(env('REDIRECT_HTTPS')) {
+            $this->app['request']->server->set('HTTPS', true);
+        }
         $this->app->bind(ProductInterfaceRepository::class,ProductEloquentRepository::class);
         $this->app->bind(CategoryInterfaceRepository::class,CategoryEloquentRepository::class);
         $this->app->bind(ProductInterfaceService::class,ProductService::class);
@@ -31,8 +33,10 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(UrlGenerator $url)
     {
-        //
+        if(env('REDIRECT_HTTPS')) {
+            $url->formatScheme('https');
+        }
     }
 }
