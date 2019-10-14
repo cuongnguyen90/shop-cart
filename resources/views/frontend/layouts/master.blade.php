@@ -19,12 +19,12 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 
     <!-- START STYLE -->
-    <link rel="stylesheet" type="text/css" href="{{URL::to('template/css/stylesheet.min.css?v=1544773292')}}" data-minify="1" />
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('template/css/stylesheet.min.css?v=1544773292')}}" data-minify="1" />
 
-    <link href="{{URL::to('template/css/owl.carousel.min.css')}}" type="text/css" rel="stylesheet" media="screen" />
+    <link href="{{secure_asset('template/css/owl.carousel.min.css')}}" type="text/css" rel="stylesheet" media="screen" />
     <link href="https://freshfood.exdomain.net/image/catalog/logo/fav.png" rel="icon" />
-    <link rel="stylesheet" type="text/css" href="{{URL::to('template/css/stylesheet.css?v=1544773292')}}" />
-    <link rel="stylesheet" href="{{URL::to('template/css/social_login_button.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('template/css/stylesheet.css?v=1544773292')}}" />
+    <link rel="stylesheet" href="{{secure_asset('template/css/social_login_button.css')}}"/>
     @yield('style')
 </head>
 <body class="common-home">
